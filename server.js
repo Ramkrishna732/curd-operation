@@ -26,5 +26,5 @@ app.get('/', (req,res)=>{
     res.redirect("/employee")
 })
 app.listen(5000, () => {
-  console.log("Server is listening on Port 5000");
+  console.log("Server is listening on PORT 5000");
 });
