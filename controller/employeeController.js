@@ -1,15 +1,13 @@
 const router = require("express").Router();
 const mongoose = require("mongoose");
+require('../models/employee.model');
 const Employee = mongoose.model("Employee");
 
-// router.get("/", (req, res) => {
-//   res.render("employee/addOrEdit", {
-//     viewTitle: "Insert Employee",
-//   });
-// });
-router.get('/', (req, res)=>{
-  res.send("employee endpoints")
-})
+router.get("/", (req, res) => {
+  res.render("employee/addOrEdit", {
+    viewTitle: "Insert Employee",
+  });
+});
 
 router.post("/", (req, res) => {
   if (req.body._id == "") {
