@@ -1,21 +1,30 @@
 {
-  "name": "node-curd",
+  "name": "nodecrud",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "employee details",
+  "main": "test.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "ramkrishna",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramkrishna732/curd-operation.git"
+  },
+  "keywords": [
+    "curd",
+    "js"
+  ],
+  "author": "Ramkrishna",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ramkrishna732/curd-operation/issues"
+  },
+  "homepage": "https://github.com/Ramkrishna732/curd-operation#readme",
   "dependencies": {
     "email-validator": "^2.0.4",
     "express": "^4.17.2",
-    "express-handlebars": "^3.1.0",
-    "mongoose": "^5.13.14"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.4"
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^6.1.8"
   }
 }
