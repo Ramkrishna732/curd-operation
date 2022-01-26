@@ -2,8 +2,8 @@
   "name": "nodecrud",
   "version": "1.0.0",
   "description": "employee details",
-  "main": "server.js", 
-   "scripts": {
+  "main": "server.js",
+  "scripts": {
     "start": "node server.js"
   },
   "repository": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Ramkrishna732/curd-operation#readme",
   "dependencies": {
+    "dotenv": "^14.3.2",
     "email-validator": "^2.0.4",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",

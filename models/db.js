@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-
-const url = "mongodb://localhost:27017/EmployeeDB";
+require('./employee.model');
+const url = process.env.MONGODB_LOCAL||process.env.MONGODB_CLOUD
 
 mongoose.connect(url,{useNewUrlParser:true},(err) => {
     if(!err){ console.log("MongoDB Connection Succeeded");}
@@ -8,5 +8,3 @@ mongoose.connect(url,{useNewUrlParser:true},(err) => {
         console.log("An Error Occured");
     } 
 })
-
-require('./employee.model');
