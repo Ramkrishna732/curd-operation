@@ -2,9 +2,9 @@
   "name": "nodecrud",
   "version": "1.0.0",
   "description": "employee details",
-  "main": "test.js", 
+  "main": "server.js", 
    "scripts": {
-    "start": "node test.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

@@ -1,10 +1,10 @@
-require("./models/db");
 const express = require("express");
-const path = require("path");
 const { engine } = require('express-handlebars');
 const employeeController = require("./controller/employeeController");
+require("./models/db");
 var app = express();
 
+app.set('port', process.env.PORT || 3000);
 app.use(
   express.urlencoded({
     extended: true,
@@ -18,6 +18,6 @@ app.use("/employee", employeeController);
 app.get('/', (req,res)=>{
     res.redirect("/employee")
 })
-app.listen(5000, () => {
+app.listen(app.get('port'), () => {
   console.log("Server is listening on Port 5000");
 });
