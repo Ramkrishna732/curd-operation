@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
 require("./employee.model");
-// const url = process.env.MONGODB_LOCAL||process.env.MONGODB_CLOUD
-const url = process.env.MONGODB_CLOUD;
+const url = process.env.MONGODB_CLOUD || process.env.MONGODB_LOCAL
 
 mongoose.connect(url, {
     useNewUrlParser: true,
-   // useFindAndModify: false,
     useUnifiedTopology: true
   
 }).then(()=>{
