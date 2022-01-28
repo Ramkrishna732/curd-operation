@@ -1,18 +1,14 @@
 const express = require("express");
-require('dotenv').config();
-
-var app = express();
 const { engine } = require('express-handlebars');
 const employeeController = require("./controller/employeeController");
+var app = express();
+require('dotenv').config();
 require("./models/db");
 
-app.set('port', process.env.PORT || 3000);
-// app.use(
-//   express.urlencoded({
-//     extended: true,
-//   })
-// );
-app.use(express.urlencoded());
+let PORT = process.env.PORT; 
+
+app.set('port', PORT || 5050);
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
@@ -21,6 +17,6 @@ app.use("/employee", employeeController);
 app.get('/', (req,res)=>{
     res.redirect("/employee");
 })
-app.listen(app.get('port'), () => {
-  console.log("Server is listening on Port:", app.get('port'));
+app.listen(PORT, () => {
+  console.log("Server is listening on Port:", PORT);
 });
