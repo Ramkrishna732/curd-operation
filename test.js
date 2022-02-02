@@ -3,7 +3,7 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 
 app.get('/', (req, res)=>{
-    res.send('testing deployement...');
+    res.send('testing deployement');
     res.end();
 })
 // custom 404 page
